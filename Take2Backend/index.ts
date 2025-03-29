@@ -6,7 +6,7 @@ const PORT = 9999;
 const app = express();
 const httpServer = createServer(app);
 
-app.set(cors({ origin: true, credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 httpServer.listen(PORT, () => {
